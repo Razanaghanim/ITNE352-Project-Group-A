@@ -49,3 +49,43 @@ The project demonstrates core concepts of **network programming**, including:
 To install the required libraries:
 ```bash
 pip install requests
+```
+## Setup Instructions
+1. Clone the Repository
+Clone the project folder or manually create the files (server.py and client.py) in a directory.
+
+2. Configure NewsAPI
+Sign up for a free API key at NewsAPI.org.
+Replace the API_KEY in server.py with your actual API key
+
+3. Run the Server
+Open a terminal in the project directory.
+Run the server script: `python server.py`
+
+4. Run the Client `python client.py`
+
+## Design Details
+### Architecture:
+Server:
+
+Runs on 127.0.0.1:12345 and listens for client connections.
+Utilizes threads to handle multiple clients simultaneously.
+Fetches data from the NewsAPI based on client requests.
+Client:
+Connects to the server via TCP.
+Provides an interactive menu-driven interface for user interaction.
+Error Handling:
+The server gracefully handles connection errors and API request failures.
+The client ensures smooth navigation even with invalid inputs.
+
+## Folder Structure
+```bash
+MultithreadedNewsSystem/
+├── server.py          # Server script
+├── client.py          # Client script
+├── README.md          # Project documentation
+```
+
+## Acknowledgments
+NewsAPI for providing an extensive news database.
+Python libraries for enabling network communication and API integration. 
